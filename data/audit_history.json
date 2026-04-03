@@ -1,0 +1,64 @@
+{
+  "QA-1": {
+    "ac_hash": "6b6e1b7baefadd2463ed72b77234128f1dbf7101b49840acdd5165af5490730d",
+    "score": 1,
+    "categories": [],
+    "updated_at": "2026-03-29T16:13:04.732796Z"
+  },
+  "QA-5": {
+    "ac_hash": "d92e4b11e8ffa53c03d499cac8bd8c82daab9e419f3af25f90767be9fd6fb099",
+    "score": 4,
+    "categories": [],
+    "updated_at": "2026-03-29T16:17:53.745354Z"
+  },
+  "QA-2": {
+    "ac_hash": "c18d8f52ab5bb7fbb202e6ab8202c0a498d2563ebd4bd8840e30db0d603eb18c",
+    "score": 1,
+    "categories": [],
+    "updated_at": "2026-03-29T16:28:22.586689Z"
+  },
+  "QA-3": {
+    "ac_hash": "3012405d2465dc0dad3f896aebb25b04ec22819964c7ce6b0fe4782a394598f4",
+    "score": 3,
+    "categories": [
+      "error",
+      "persistence"
+    ],
+    "updated_at": "2026-03-29T16:28:22.940338Z"
+  },
+  "QA-4": {
+    "ac_hash": "3146eadadee7420b0462d60bec185475e541af90a23c694d8bc6b3d3f0af10ca",
+    "score": 5,
+    "categories": [
+      "security"
+    ],
+    "updated_at": "2026-03-29T16:30:42.378279Z"
+  },
+  "QA-6": {
+    "ac_hash": "72894205e080be3a7fa512ad30261ca02b851121adefa81ec4038ae5a5771e0b",
+    "score": 4,
+    "categories": [],
+    "updated_at": "2026-03-29T16:30:43.292477Z"
+  },
+  "QA-7": {
+    "ac_hash": "7324776773183b8d4b05fbe131cb1526a1582c74ee9d9e1ffa5ac50d50b2c953",
+    "score": 1,
+    "categories": [],
+    "updated_at": "2026-03-29T16:30:43.621056Z"
+  },
+  "QA-8": {
+    "ac_hash": "7ea55de314343fedd0c816a78701e3dc4033df64094963d5b765bdc04d2d8001",
+    "score": 3,
+    "categories_present": [
+      "happy_path"
+    ],
+    "categories_missing": [
+      "error",
+      "boundary",
+      "ui_feedback",
+      "security",
+      "persistence"
+    ],
+    "updated_at": "2026-04-02T05:51:43.368698Z"
+  }
+}
