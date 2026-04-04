@@ -9,23 +9,23 @@ def supervisor_router(state):
 
 
 def route_next(state):
-    if not state.get("stories"):
+    if not state.get("stories"):                                # stories = None? → fetch first
         logger.info("→ Routing to: jira_fetcher")
         return "jira_fetcher"
 
-    if not state.get("parsed_stories"):
+    if not state.get("parsed_stories"):                          # not parsed yet?  
         logger.info("→ Routing to: ac_parser")
         return "ac_parser"
 
-    if not state.get("scored_stories"):
+    if not state.get("scored_stories"):                          # not scored yet?   
         logger.info("→ Routing to: completeness_scorer")
         return "completeness_scorer"
 
-    if not state.get("gap_analysis"):
+    if not state.get("gap_analysis"):                            # not analyzed for gaps yet?    
         logger.info("→ Routing to: gap_identifier")
         return "gap_identifier"
 
-    if not state.get("suggested_ac"):
+    if not state.get("suggested_ac"):                           # not suggested improvements yet?   
         logger.info("→ Routing to: improvement_suggester")
         return "improvement_suggester"
 
@@ -34,7 +34,7 @@ def route_next(state):
         return "slack_reporter"
 
     logger.info("→ All agents complete. Compiling report...")
-    return "FINISH"
+    return "FINISH"                                             # everything done → compile
 
 
 def supervisor_compile(state):

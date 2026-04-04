@@ -20,6 +20,7 @@ def build_graph():
 
     workflow = StateGraph(JiraAcAuditState)
 
+    # Register all nodes (agents + supervisor pieces)
     workflow.add_node("router", supervisor_router)
     workflow.add_node("jira_fetcher", jira_fetcher_agent)
     workflow.add_node("ac_parser", ac_parser_agent)
@@ -29,8 +30,10 @@ def build_graph():
     workflow.add_node("slack_reporter", slack_reporter_agent)
     workflow.add_node("compile_report", supervisor_compile)
 
+    # Always start at the router
     workflow.set_entry_point("router")
 
+    # Router uses conditional edges — it decides where to go next based on the state
     workflow.add_conditional_edges(
         "router",
         route_next,
@@ -45,6 +48,7 @@ def build_graph():
         }
     )
 
+    # Every agent returns to the router after finishing
     for step in ["jira_fetcher", "ac_parser", "completeness_scorer", "gap_identifier", "improvement_suggester", "slack_reporter"]:
     #for step in ["jira_fetcher", "ac_parser", "completeness_scorer"]:
         workflow.add_edge(step, "router")

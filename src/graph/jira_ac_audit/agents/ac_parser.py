@@ -12,10 +12,12 @@ def _extract_acceptance_criteria(description: str):
     lower = description.lower()
     ac_section = description
 
+    # Stage 1: Find "Acceptance Criteria:" section if it exists
     match = re.search(r"acceptance criteria[:\n]*(.*)$", description, re.IGNORECASE | re.DOTALL)
     if match:
         ac_section = match.group(1).strip()
 
+    # Stage 2: Split into lines, look for bullet/numbered items
     lines = ac_section.splitlines()
     items = []
 
@@ -28,10 +30,13 @@ def _extract_acceptance_criteria(description: str):
             cleaned = re.sub(r"^(\d+[\.)]|[-*+] )", "", stripped).strip()
             if cleaned:
                 items.append(cleaned)
+
+    # Stage 3: Fallback — if no list found, use first long line
         elif len(stripped.split()) > 5 and len(items) == 0:
             # fallback: crawl first large line(s)
             items.append(stripped)
 
+    # Stage 4: Last resort — use the whole description as one item
     if not items and description.strip():
         # no clear list, fallback to full text as one AC item
         items = [description.strip()]

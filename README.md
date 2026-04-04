@@ -64,12 +64,6 @@ python -c "from src.core.vectore_store import build_vector_store; build_vector_s
 
 ## Run pipelines
 
-### Jira -> testcase -> TestRail -> Slack
-
-```powershell
-python -m src.graph.drivers.run_jira_testrail_slack QA-1
-```
-
 ### AC audit + suggestions -> Slack
 
 - All stories (requires Jira search support or environment keys):
@@ -117,7 +111,6 @@ Restart Streamlit after installing.
 
 Output files:
 
-- `outputs/jira_testrail_slack/<jira_key>_report.txt`
 - `outputs/jira_ac_audit/<jira_key>_ac_audit_report.txt`
 
 ## Key features

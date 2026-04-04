@@ -26,7 +26,7 @@ def get_story_history(story_key: str):
     history = load_history()
     return history.get(story_key)
 
-
+# What audit_history.json looks like:
 def set_story_history(story_key: str, ac_hash: str, score: int, categories_present: list, categories_missing: list = None):
     history = load_history()
     history[story_key] = {
