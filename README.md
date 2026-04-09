@@ -70,6 +70,7 @@ python -c "from src.core.vectore_store import build_vector_store; build_vector_s
 
 ```powershell
 python -m src.graph.drivers.run_ac_audit all
+python -m src.graph.drivers.run_tc_qualityReviewer
 ```
 
 - Single story

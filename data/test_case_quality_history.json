@@ -1,0 +1,79 @@
+{
+  "1": {
+    "content_hash": "c16efff6f91edc4a385947ee627abcf11241727a5f7f91cec7d07059b4d0ebf5",
+    "score": 7,
+    "issues": [],
+    "updated": false,
+    "last_reviewed_at": "2026-04-09T05:15:13.493882Z"
+  },
+  "2": {
+    "content_hash": "a42a90a0a4c0b773c35437138bc76a3c9f1f66dce3d3f6f222c9d09d67dc4b44",
+    "score": 7,
+    "issues": [],
+    "updated": false,
+    "last_reviewed_at": "2026-04-09T05:15:13.514180Z"
+  },
+  "4": {
+    "content_hash": "f03a096be1a7f68408a88e7004b169887969da537d0a40666343baf96babb914",
+    "score": 6,
+    "issues": [
+      "Some steps are vague or not specific"
+    ],
+    "updated": true,
+    "last_reviewed_at": "2026-04-09T05:17:18.276173Z"
+  },
+  "5": {
+    "content_hash": "3ced8d451ed9af97dfbdcec78b5c9195cb53a5bd00ee981c4d37de03b3158b77",
+    "score": 7,
+    "issues": [
+      "Some steps are vague or not specific"
+    ],
+    "updated": true,
+    "last_reviewed_at": "2026-04-09T05:15:59.486074Z"
+  },
+  "6": {
+    "content_hash": "e88d20c04798714591fac3c90818a293de19785eafa9aa9b1efe60c6308ef1bb",
+    "score": 7,
+    "issues": [
+      "Some steps are vague or not specific"
+    ],
+    "updated": true,
+    "last_reviewed_at": "2026-04-09T05:16:02.107964Z"
+  },
+  "7": {
+    "content_hash": "b99f2802f163a8bcf6ae1786f2d5e047bfbecb63bc250d7d930af1eec9144885",
+    "score": 7,
+    "issues": [],
+    "updated": false,
+    "last_reviewed_at": "2026-04-09T05:15:13.565041Z"
+  },
+  "8": {
+    "content_hash": "f276022db934772a7b85f6decdc31b9f588eb916b5a4b01da3bc10c95fb35fec",
+    "score": 7,
+    "issues": [],
+    "updated": false,
+    "last_reviewed_at": "2026-04-09T05:15:13.583287Z"
+  },
+  "9": {
+    "content_hash": "a2d7de6e5c6be6b209dfe324a6320c2c012428803f2719bdf8ba4f6f830be930",
+    "score": 7,
+    "issues": [
+      "Title is vague or too short",
+      "Too few test steps",
+      "Expected result is missing or unclear"
+    ],
+    "updated": true,
+    "last_reviewed_at": "2026-04-09T05:17:20.851638Z"
+  },
+  "10": {
+    "content_hash": "d28e4cecb1d832608b402c48ee79bd436ffa8386cff845631245fb63e53a87c7",
+    "score": 7,
+    "issues": [
+      "Title is vague or too short",
+      "Too few test steps",
+      "Expected result is missing or unclear"
+    ],
+    "updated": true,
+    "last_reviewed_at": "2026-04-09T05:16:04.728774Z"
+  }
+}

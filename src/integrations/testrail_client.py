@@ -26,7 +26,7 @@ class TestRailClient:
 
     def add_case(self, section_id: int, title: str, steps: list, expected: str, priority: str) -> dict:
         """Push a single test case to TestRail."""
-        url = f"{self.base_url}/index.php?/api/v2/add_case/{section_id}"
+        url = f"{self.base_url}/index.php/api/v2/add_case/{section_id}"
 
         payload = {
             "title": title,
@@ -55,3 +55,37 @@ class TestRailClient:
             )
             created_ids.append(result.get("id"))
         return created_ids
+
+    def get_cases(self, project_id: int, suite_id: int = None, section_id: int = None) -> list:
+        if not project_id:
+            raise ValueError("TestRail project_id is required to fetch cases")
+
+        url = f"{self.base_url}/index.php/api/v2/get_cases/{project_id}"
+        params = {}
+        if suite_id is not None:
+            params["suite_id"] = suite_id
+        if section_id is not None:
+            params["section_id"] = section_id
+
+        response = httpx.get(url, params=params, auth=self.auth, headers=self.headers)
+        response.raise_for_status()
+        return response.json()
+
+    def update_case(self, case_id: int, title: str = None, preconditions: str = None, steps: list = None, expected: str = None) -> dict:
+        if not case_id:
+            raise ValueError("TestRail case_id is required for update_case")
+
+        url = f"{self.base_url}/index.php/api/v2/update_case/{case_id}"
+        payload = {}
+        if title is not None:
+            payload["title"] = title
+        if preconditions is not None:
+            payload["custom_preconds"] = preconditions
+        if steps is not None:
+            payload["custom_steps_separated"] = [
+                {"step": step, "expected": expected or ""} for step in steps
+            ]
+
+        response = httpx.post(url, json=payload, auth=self.auth, headers=self.headers)
+        response.raise_for_status()
+        return response.json()
