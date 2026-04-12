@@ -2,7 +2,9 @@ import os
 import re
 from src.core import get_logger
 from src.integrations import TestRailClient
+from dotenv import load_dotenv
 
+load_dotenv()
 logger = get_logger("tc_quality_testrail_fetcher")
 client = TestRailClient()
 
@@ -20,7 +22,7 @@ def _normalize_case(raw: dict) -> dict:
         step_text = item.get("step") or item.get("content") or item.get("action") or ""
         expected_step = item.get("expected") or item.get("expected_result") or ""
         if step_text:
-            steps.append(step_text.strip())
+            steps.append(f"Step : {step_text.strip()}-- Expected Result: {expected_step.strip()}" if expected_step else step_text.strip())
         if expected_step and not expected_result:
             expected_result = expected_step.strip()
            
@@ -69,7 +71,7 @@ def testrail_fetcher_agent(state):
         raw_cases = raw_response.get('cases', []) if isinstance(raw_response, dict) else raw_response
         cases = [_normalize_case(raw) for raw in raw_cases]
         logger.info(f"✅ TestRail fetcher returned {len(cases)} cases")
-        logger.info(f"✅ TestRail cases returned state {cases}")
+      #  logger.info(f"✅ TestRail cases returned state {cases}")
         
         return {
             "testrail_cases": cases,

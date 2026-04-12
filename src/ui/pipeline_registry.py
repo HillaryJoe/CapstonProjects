@@ -46,35 +46,7 @@ def run_test_case_quality_review() -> dict:
         "errors": [],
     })
 
-#     graph = build_graph()
-#     return graph.invoke({
-#         "log_content": log_content,
-#         "next_agent": "",
-#         "log_analysis": None,
-#         "root_cause": None,
-#         "solution": None,
-#         "incident_report": "",
-#         "steps_completed": [],
-#         "errors": [],
-#     })
 
-# def run_jira_testrail_slack(jira_key: str) -> dict:
-#     graph = build_graph()
-#     return graph.invoke({
-#         "jira_key": jira_key,
-#         "next_agent": "",
-#         "jira_summary": None,
-#         "jira_description": None,
-#         "test_cases": None,
-#         "testrail_case_ids": None,
-#         "slack_message_ts": None,
-#         "retrieved_context": None,
-#         "past_patterns": None,
-#         "conversation_history": None,
-#         "summary_report": "",
-#         "steps_completed": [],
-#         "errors": [],
-#     })
 
 PIPELINE_REGISTRY: list[PipelineConfig] = [
     PipelineConfig(
@@ -89,10 +61,5 @@ PIPELINE_REGISTRY: list[PipelineConfig] = [
         description="Review TestRail cases for quality, rewrite low-quality cases, and post a Slack summary.",
         run_fn=run_test_case_quality_review
     ),
-#     PipelineConfig(
-#     name="Jira → TestRail → Slack",
-#     input_type="jira_key",
-#     description="Fetch a Jira ticket, analyze acceptance criteria, push to TestRail, notify Slack.",
-#     run_fn=run_jira_testrail_slack,
-# ),
+
 ]

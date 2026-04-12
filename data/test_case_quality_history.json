@@ -1,79 +1,127 @@
 {
   "1": {
-    "content_hash": "c16efff6f91edc4a385947ee627abcf11241727a5f7f91cec7d07059b4d0ebf5",
-    "score": 7,
-    "issues": [],
-    "updated": false,
-    "last_reviewed_at": "2026-04-09T05:15:13.493882Z"
+    "content_hash": "7763ac1db45864a017a42f18ecf2a9cf4a9af83380c4c8b3d72b4ab3c81dd01c",
+    "score": 5,
+    "issues": [
+      "Title is clear but lacks specificity in format.",
+      "Preconditions are defined but could include more detail about user role.",
+      "Steps are not properly numbered and contain repetitive actions.",
+      "Steps contain vague language and lack precise actions.",
+      "Expected results are repetitive and not clearly associated with each step.",
+      "Missing priority and test type fields."
+    ],
+    "updated": true,
+    "last_reviewed_at": "2026-04-12T04:29:12.173587Z"
   },
   "2": {
-    "content_hash": "a42a90a0a4c0b773c35437138bc76a3c9f1f66dce3d3f6f222c9d09d67dc4b44",
-    "score": 7,
-    "issues": [],
-    "updated": false,
-    "last_reviewed_at": "2026-04-09T05:15:13.514180Z"
+    "content_hash": "c5ec3bd8742914843d5ad3e50ba7e673b5857f913fb5b4e69cdf076c145b5e98",
+    "score": 5,
+    "issues": [
+      "Title is clear but lacks specificity regarding the context of the test.",
+      "Preconditions are vague and do not specify user role or data requirements.",
+      "Steps are poorly formatted, contain repetitive actions, and lack clear numbering.",
+      "Expected results are repeated multiple times and are not clearly associated with each step.",
+      "Missing priority and test type fields.",
+      "Steps do not follow a logical order and contain extraneous text."
+    ],
+    "updated": true,
+    "last_reviewed_at": "2026-04-12T04:29:14.698501Z"
   },
   "4": {
-    "content_hash": "f03a096be1a7f68408a88e7004b169887969da537d0a40666343baf96babb914",
-    "score": 6,
+    "content_hash": "1ac9d553600790b3ecc3a866e3a3ec27b880794f4da0e7fdc77b021c09090b83",
+    "score": 4,
     "issues": [
-      "Some steps are vague or not specific"
+      "Title is vague and does not follow the good title format.",
+      "Preconditions are minimal and lack detail about user role and data.",
+      "Steps are not clearly numbered and contain repetitive actions.",
+      "Steps contain vague language such as 'Check' without specific actions.",
+      "Expected results are repeated multiple times and lack clarity.",
+      "Missing priority and test type fields."
     ],
     "updated": true,
-    "last_reviewed_at": "2026-04-09T05:17:18.276173Z"
+    "last_reviewed_at": "2026-04-12T04:29:17.267551Z"
   },
   "5": {
-    "content_hash": "3ced8d451ed9af97dfbdcec78b5c9195cb53a5bd00ee981c4d37de03b3158b77",
-    "score": 7,
+    "content_hash": "afc63acf1ab894c334493745c6265440453ab40fb02e28cd16529da798fa01a5",
+    "score": 5,
     "issues": [
-      "Some steps are vague or not specific"
+      "Title is vague and does not follow the good title format.",
+      "Preconditions are minimal and lack detail about user role and data.",
+      "Steps are not clearly numbered and contain repetitive and incomplete actions.",
+      "Expected results are vague and not specific or measurable for each step.",
+      "Repetitive expected results across multiple steps create confusion.",
+      "Missing priority and test type fields."
     ],
     "updated": true,
-    "last_reviewed_at": "2026-04-09T05:15:59.486074Z"
+    "last_reviewed_at": "2026-04-12T04:29:19.781631Z"
   },
   "6": {
-    "content_hash": "e88d20c04798714591fac3c90818a293de19785eafa9aa9b1efe60c6308ef1bb",
-    "score": 7,
+    "content_hash": "ed728186ae0d25c185ca558a5b27fff7ed468e23a871732ebe4848b79cf55f66",
+    "score": 4,
     "issues": [
-      "Some steps are vague or not specific"
+      "Title is vague and does not follow the good title format.",
+      "Preconditions are minimal and lack detail about user role and data.",
+      "Steps are not clearly numbered and contain repetitive actions.",
+      "Steps contain vague language such as 'Check for the presence of' without clear actions.",
+      "Expected results are repeated multiple times and lack clarity.",
+      "Missing priority and test type fields."
     ],
     "updated": true,
-    "last_reviewed_at": "2026-04-09T05:16:02.107964Z"
+    "last_reviewed_at": "2026-04-12T04:29:22.307242Z"
   },
   "7": {
-    "content_hash": "b99f2802f163a8bcf6ae1786f2d5e047bfbecb63bc250d7d930af1eec9144885",
-    "score": 7,
-    "issues": [],
-    "updated": false,
-    "last_reviewed_at": "2026-04-09T05:15:13.565041Z"
+    "content_hash": "9fb7f5e4587826b486178e98888828ce72707e2ab26d8b1d664d708f74ddec2f",
+    "score": 4,
+    "issues": [
+      "Title is somewhat clear but could be more specific.",
+      "Preconditions lack detail about user role and data required.",
+      "Steps are poorly formatted, contain repetitive actions, and are not numbered correctly.",
+      "Expected results are repetitive and not clearly associated with each step.",
+      "Vague language used in steps and expected results.",
+      "Missing priority and test type fields."
+    ],
+    "updated": true,
+    "last_reviewed_at": "2026-04-12T04:29:24.803733Z"
   },
   "8": {
-    "content_hash": "f276022db934772a7b85f6decdc31b9f588eb916b5a4b01da3bc10c95fb35fec",
-    "score": 7,
-    "issues": [],
-    "updated": false,
-    "last_reviewed_at": "2026-04-09T05:15:13.583287Z"
+    "content_hash": "1bce421d38fdde23ee380eadddb2b5069c7db46d82db41abe4ea5dd1f47d9657",
+    "score": 5,
+    "issues": [
+      "Title is somewhat clear but could be more specific.",
+      "Preconditions lack detail about user role and specific data required.",
+      "Steps are not properly numbered and contain repetitive actions.",
+      "Steps contain vague language such as 'step completes without errors'.",
+      "Expected results are repeated multiple times and lack clarity.",
+      "Missing priority and test type fields."
+    ],
+    "updated": true,
+    "last_reviewed_at": "2026-04-12T04:29:27.263872Z"
   },
   "9": {
-    "content_hash": "a2d7de6e5c6be6b209dfe324a6320c2c012428803f2719bdf8ba4f6f830be930",
-    "score": 7,
+    "content_hash": "8ff99fb2bbe8d253453aa77105ace7c68e7dd223be7e64bad5ced7d1db2bac74",
+    "score": 4,
     "issues": [
-      "Title is vague or too short",
-      "Too few test steps",
-      "Expected result is missing or unclear"
+      "Title is vague and does not follow the good title format.",
+      "Preconditions lack detail about the user role and specific data required.",
+      "Steps are not clearly numbered and contain repetitive actions.",
+      "Step actions are not precise and actionable, leading to ambiguity.",
+      "Expected result is repeated multiple times without variation or clarity.",
+      "Missing priority and test type fields."
     ],
     "updated": true,
-    "last_reviewed_at": "2026-04-09T05:17:20.851638Z"
+    "last_reviewed_at": "2026-04-12T04:29:29.702858Z"
   },
   "10": {
-    "content_hash": "d28e4cecb1d832608b402c48ee79bd436ffa8386cff845631245fb63e53a87c7",
-    "score": 7,
+    "content_hash": "706b73196f115f07ac953bd0d5943da7c1a70c6623e916bd1eb4b34c533d8993",
+    "score": 3,
     "issues": [
-      "Title is vague or too short",
-      "Too few test steps",
-      "Expected result is missing or unclear"
+      "Title is vague and does not follow the good title format.",
+      "Preconditions are minimal and lack detail about user role and data requirements.",
+      "Steps are not clearly numbered and contain repetitive and incomplete actions.",
+      "Expected results are repeated multiple times and lack specificity and measurability.",
+      "Missing priority and test type fields."
     ],
-    "updated": true,
-    "last_reviewed_at": "2026-04-09T05:16:04.728774Z"
+    "updated": false,
+    "last_reviewed_at": "2026-04-12T04:28:31.586499Z"
   }
 }

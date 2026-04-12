@@ -4,7 +4,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from src.core import get_logger, get_langchain_llm, search_vector_store
 from src.core.test_case_history import get_case_history, set_case_history
-from src.prompts.test_case_quality_prompts import TEST_CASE_SCORE_SYSTEM_PROMPT
+from src.prompts.tc_quality_prompts import TEST_CASE_SCORE_SYSTEM_PROMPT
 
 logger = get_logger("tc_quality_completeness_checker")
 llm = get_langchain_llm()
@@ -109,6 +109,7 @@ def score_test_case(case: dict, rag_context: str):
 def completeness_checker_agent(state):
     logger.info("🧾 Test Case Quality Reviewer: completeness checker running...")
     cases = state.get("testrail_cases", [])
+    #logger.info(f"🔎 Test cases retrieved from {cases}")
     scored = []
 
     if not cases:
@@ -132,12 +133,14 @@ def completeness_checker_agent(state):
     except Exception as e:
         logger.warning(f"RAG search failed: {e}")
         rag_context = "Quality guidelines for test case writing, including clear titles, explicit preconditions, specific steps, and measurable expected results."
+    logger.info(f"🔎 RAG context: {rag_context}")
 
     for case in cases:
         case_id = str(case.get("id", "unknown"))
         current_hash = _hash_case(case)
         history = get_case_history(case_id)
 
+       # if "1"=="2":
         if history and history.get("content_hash") == current_hash:
             logger.info(f"ℹ️ Cached score used for case {case_id}")
             scored.append({
@@ -159,6 +162,7 @@ def completeness_checker_agent(state):
         set_case_history(case_id, current_hash, score, issues)
 
     logger.info(f"✅ Scored {len(scored)} test cases")
+    #logger.info(f"🔎 scored Test cases {scored}")
     return {
         "scored_cases": scored,
         "steps_completed": state.get("steps_completed", []) + ["completeness_checker"]

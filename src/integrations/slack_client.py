@@ -6,7 +6,8 @@ import httpx
 from dotenv import load_dotenv
 
 load_dotenv()
-
+# Default timeout: 10s connect, 30s read — prevents infinite hang on slow Slack mock
+DEFAULT_TIMEOUT = httpx.Timeout(connect=10.0, read=30.0, write=10.0, pool=5.0)
 
 class SlackClient:
 
@@ -26,7 +27,7 @@ class SlackClient:
             "channel": self.channel,
             "text": text
         }
-        response = httpx.post(url, json=payload, headers=self.headers)
+        response = httpx.post(url, json=payload, headers=self.headers,timeout=DEFAULT_TIMEOUT,)
         response.raise_for_status()
         data = response.json()
 

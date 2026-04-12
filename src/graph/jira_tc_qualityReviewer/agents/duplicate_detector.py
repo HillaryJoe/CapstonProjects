@@ -18,6 +18,7 @@ def _similarity(a: str, b: str) -> float:
 def duplicate_detector_agent(state):
     logger.info("🔎 Test Case Quality Reviewer: duplicate detector running...")
     cases = state.get("scored_cases", [])
+    #logger.info(f"🔎 Test cases retrieved from {cases}")
     duplicate_pairs = []
     duplicate_ids = set()
 
@@ -34,7 +35,18 @@ def duplicate_detector_agent(state):
             title_similarity = _similarity(title_a, title_b)
             steps_similarity = _similarity(steps_a, steps_b)
 
-            if title_similarity >= 0.75 or (steps_similarity >= 0.65 and title_similarity >= 0.45):
+            # Debug: Log all comparisons for case 9 and 10
+            case_a_id = case_a.get("id")
+            case_b_id = case_b.get("id")
+            if (case_a_id == "9" or case_a_id == 9 or case_b_id == "9" or case_b_id == 9 or 
+                case_a_id == "10" or case_a_id == 10 or case_b_id == "10" or case_b_id == 10):
+                logger.info(f"📊 Comparing {case_a_id} vs {case_b_id}: title_sim={title_similarity:.2f}, steps_sim={steps_similarity:.2f}")
+
+            # Flag as duplicate only if:
+            # 1. Title similarity is near-identical (>=0.95), OR
+            # 2. Both title AND steps are very similar (title>=0.85 AND steps>=0.88)
+            # This prevents subtle differences (valid vs invalid) but catches true duplicates
+            if title_similarity >= 0.95 or (title_similarity >= 0.85 and steps_similarity >= 0.88):
                 primary, duplicate = (case_a, case_b) if case_a.get("quality_score", 0) >= case_b.get("quality_score", 0) else (case_b, case_a)
                 if primary.get("quality_score", 0) == duplicate.get("quality_score", 0) and primary.get("id") and duplicate.get("id"):
                     if str(primary.get("id")) > str(duplicate.get("id")):
@@ -56,6 +68,9 @@ def duplicate_detector_agent(state):
                 duplicate["duplicate_confidence"] = max(title_similarity, steps_similarity)
 
     logger.info(f"✅ Detected {len(duplicate_pairs)} duplicate pair(s)")
+    logger.info(f"Duplicate pairs: {duplicate_pairs}")
+    logger.info(f"duplicate IDs: {list(duplicate_ids)}")
+
     return {
         "duplicate_pairs": duplicate_pairs,
         "duplicate_case_ids": list(duplicate_ids),
