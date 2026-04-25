@@ -30,7 +30,7 @@ def run_jira_ac_audit(jira_key: str) -> dict:       # this function will be call
     })
 
 
-def run_test_case_quality_review() -> dict:
+def run_test_case_quality_review(log_data: str | None = None) -> dict:
     graph = build_testrail_quality_graph()
     return graph.invoke({
         "next_agent": "",
@@ -63,3 +63,39 @@ PIPELINE_REGISTRY: list[PipelineConfig] = [
     ),
 
 ]
+
+if __name__ == "__main__":
+    import streamlit as st
+
+    st.title("Pipeline Registry")
+
+    # Select a pipeline
+    pipeline_names = [config.name for config in PIPELINE_REGISTRY]
+    selected_pipeline_name = st.selectbox("Select a Pipeline", pipeline_names)
+
+    # Find the selected config
+    selected_config = next(config for config in PIPELINE_REGISTRY if config.name == selected_pipeline_name)
+
+    st.write(f"**Description:** {selected_config.description}")
+    st.write(f"**Input Type:** {selected_config.input_type}")
+
+    # Input based on type
+    if selected_config.input_type == "jira_key":
+        user_input = st.text_input("Enter Jira Key")
+    elif selected_config.input_type == "log":
+        user_input = st.text_area("Enter Log Data")
+    else:
+        user_input = None
+
+    if st.button("Run Pipeline"):
+        if user_input or selected_config.input_type == "log":
+            try:
+                if selected_config.input_type == "jira_key":
+                    result = selected_config.run_fn(user_input)
+                else:
+                    result = selected_config.run_fn()
+                st.json(result)
+            except Exception as e:
+                st.error(f"Error running pipeline: {str(e)}")
+        else:
+            st.error("Please provide the required input.")

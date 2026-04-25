@@ -40,19 +40,23 @@ else:
 
     user_input = None
 
-    if selected.input_type == 'log':
-        uploaded = st.file_uploader("Upload Log File", type=["txt", "log"])
-        if uploaded:
-            user_input = uploaded.read().decode("utf-8")
-        else:
-            user_input = st.text_area("Or paste log content here", height=200)
+    if selected.input_type == 'PROJECT_ID':
+        user_input = st.text_input("PROJECT_ID", placeholder="1")
 
     elif selected.input_type == "jira_key":
         user_input = st.text_input("Jira Issue Key", placeholder="QA-1")
 
+    elif selected.input_type == "log":
+        # No input needed for log-based pipelines like tc_qualityReviewer
+        user_input = "ready"
+
     if st.button("Run Pipeline", disabled=not user_input):
         with st.spinner("Running pipeline..."):
-            st.session_state["result"] = selected.run_fn(user_input)
+            if selected.input_type == "log":
+                # For log-based pipelines, call without arguments
+                st.session_state["result"] = selected.run_fn()
+            else:
+                st.session_state["result"] = selected.run_fn(user_input)
 
     if "result" in st.session_state:
         render_report_output(st.session_state["result"])

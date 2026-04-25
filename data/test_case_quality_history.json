@@ -3,99 +3,97 @@
     "content_hash": "7763ac1db45864a017a42f18ecf2a9cf4a9af83380c4c8b3d72b4ab3c81dd01c",
     "score": 5,
     "issues": [
-      "Title is clear but lacks specificity in format.",
-      "Preconditions are defined but could include more detail about user role.",
-      "Steps are not properly numbered and contain repetitive actions.",
-      "Steps contain vague language and lack precise actions.",
-      "Expected results are repetitive and not clearly associated with each step.",
+      "Title is clear but could be more specific with conditions.",
+      "Preconditions are defined but lack detail about user role and data requirements.",
+      "Steps are not numbered correctly and contain repetitive expected results.",
+      "Expected results are vague in some steps, particularly regarding the visibility of elements.",
       "Missing priority and test type fields."
     ],
     "updated": true,
-    "last_reviewed_at": "2026-04-12T04:29:12.173587Z"
+    "last_reviewed_at": "2026-04-25T14:04:09.144369Z"
   },
   "2": {
     "content_hash": "c5ec3bd8742914843d5ad3e50ba7e673b5857f913fb5b4e69cdf076c145b5e98",
     "score": 5,
     "issues": [
-      "Title is clear but lacks specificity regarding the context of the test.",
-      "Preconditions are vague and do not specify user role or data requirements.",
-      "Steps are poorly formatted, contain repetitive actions, and lack clear numbering.",
-      "Expected results are repeated multiple times and are not clearly associated with each step.",
-      "Missing priority and test type fields.",
-      "Steps do not follow a logical order and contain extraneous text."
+      "Title is clear but could be more specific regarding the context of invalid credentials.",
+      "Preconditions lack detail about user role and specific data required.",
+      "Steps are not numbered correctly; they include non-sequential numbering and formatting issues.",
+      "Steps contain vague language such as 'Step :' and 'Expected Result:' which should be removed for clarity.",
+      "Expected results are repeated and not clearly associated with each step.",
+      "Missing priority and test type fields."
     ],
     "updated": true,
-    "last_reviewed_at": "2026-04-12T04:29:14.698501Z"
+    "last_reviewed_at": "2026-04-25T14:04:11.981453Z"
   },
   "4": {
     "content_hash": "1ac9d553600790b3ecc3a866e3a3ec27b880794f4da0e7fdc77b021c09090b83",
     "score": 4,
     "issues": [
-      "Title is vague and does not follow the good title format.",
-      "Preconditions are minimal and lack detail about user role and data.",
-      "Steps are not clearly numbered and contain repetitive actions.",
-      "Steps contain vague language such as 'Check' without specific actions.",
-      "Expected results are repeated multiple times and lack clarity.",
+      "Title is somewhat clear but could be more specific and follow the good title format.",
+      "Preconditions are minimal and lack detail about user role and data requirements.",
+      "Steps are not properly numbered and contain vague language such as 'Check' without clear actions.",
+      "Expected results are repeated and not clearly associated with each step.",
       "Missing priority and test type fields."
     ],
     "updated": true,
-    "last_reviewed_at": "2026-04-12T04:29:17.267551Z"
+    "last_reviewed_at": "2026-04-25T14:04:14.872953Z"
   },
   "5": {
     "content_hash": "afc63acf1ab894c334493745c6265440453ab40fb02e28cd16529da798fa01a5",
     "score": 5,
     "issues": [
-      "Title is vague and does not follow the good title format.",
-      "Preconditions are minimal and lack detail about user role and data.",
-      "Steps are not clearly numbered and contain repetitive and incomplete actions.",
-      "Expected results are vague and not specific or measurable for each step.",
-      "Repetitive expected results across multiple steps create confusion.",
+      "Title is somewhat clear but could be more specific regarding the conditions being tested.",
+      "Preconditions are minimal and do not specify user role or any required data.",
+      "Steps are not consistently numbered and contain vague language such as 'Check for the presence of'.",
+      "Expected results for individual steps are vague and do not specify measurable outcomes.",
+      "Expected result section is redundant and does not align with the individual step expected results.",
       "Missing priority and test type fields."
     ],
     "updated": true,
-    "last_reviewed_at": "2026-04-12T04:29:19.781631Z"
+    "last_reviewed_at": "2026-04-25T14:04:17.670501Z"
   },
   "6": {
     "content_hash": "ed728186ae0d25c185ca558a5b27fff7ed468e23a871732ebe4848b79cf55f66",
     "score": 4,
     "issues": [
       "Title is vague and does not follow the good title format.",
-      "Preconditions are minimal and lack detail about user role and data.",
-      "Steps are not clearly numbered and contain repetitive actions.",
-      "Steps contain vague language such as 'Check for the presence of' without clear actions.",
-      "Expected results are repeated multiple times and lack clarity.",
+      "Preconditions lack detail about user role and specific data required.",
+      "Steps are not clearly numbered and contain repetitive information.",
+      "Step actions are not precise and actionable; vague language used.",
+      "Expected results are not clearly defined for each step.",
       "Missing priority and test type fields."
     ],
     "updated": true,
-    "last_reviewed_at": "2026-04-12T04:29:22.307242Z"
+    "last_reviewed_at": "2026-04-25T14:04:20.678097Z"
   },
   "7": {
     "content_hash": "9fb7f5e4587826b486178e98888828ce72707e2ab26d8b1d664d708f74ddec2f",
     "score": 4,
     "issues": [
-      "Title is somewhat clear but could be more specific.",
-      "Preconditions lack detail about user role and data required.",
-      "Steps are poorly formatted, contain repetitive actions, and are not numbered correctly.",
-      "Expected results are repetitive and not clearly associated with each step.",
-      "Vague language used in steps and expected results.",
-      "Missing priority and test type fields."
+      "Title is somewhat clear but could be more specific and follow the recommended format.",
+      "Preconditions lack detail about user role and any necessary data.",
+      "Steps are not properly numbered and contain vague language such as 'Verify' and 'Ensure'.",
+      "Expected results are repeated and not clearly defined for each step.",
+      "Missing priority and test type fields.",
+      "No error or failure scenario is covered."
     ],
     "updated": true,
-    "last_reviewed_at": "2026-04-12T04:29:24.803733Z"
+    "last_reviewed_at": "2026-04-25T14:04:23.387110Z"
   },
   "8": {
     "content_hash": "1bce421d38fdde23ee380eadddb2b5069c7db46d82db41abe4ea5dd1f47d9657",
     "score": 5,
     "issues": [
-      "Title is somewhat clear but could be more specific.",
-      "Preconditions lack detail about user role and specific data required.",
-      "Steps are not properly numbered and contain repetitive actions.",
-      "Steps contain vague language such as 'step completes without errors'.",
-      "Expected results are repeated multiple times and lack clarity.",
-      "Missing priority and test type fields."
+      "Title is somewhat clear but could be more specific about the conditions being tested.",
+      "Preconditions lack detail about the user role and any necessary data.",
+      "Steps are not consistently numbered and contain vague language such as 'step completes without errors'.",
+      "Expected results are repeated and not clearly defined for each step.",
+      "Missing priority and test type fields.",
+      "No error or failure scenarios are covered."
     ],
     "updated": true,
-    "last_reviewed_at": "2026-04-12T04:29:27.263872Z"
+    "last_reviewed_at": "2026-04-25T14:04:25.953513Z"
   },
   "9": {
     "content_hash": "8ff99fb2bbe8d253453aa77105ace7c68e7dd223be7e64bad5ced7d1db2bac74",
@@ -103,13 +101,12 @@
     "issues": [
       "Title is vague and does not follow the good title format.",
       "Preconditions lack detail about the user role and specific data required.",
-      "Steps are not clearly numbered and contain repetitive actions.",
-      "Step actions are not precise and actionable, leading to ambiguity.",
-      "Expected result is repeated multiple times without variation or clarity.",
+      "Steps are not clearly numbered and contain vague language such as 'Step :' and 'Expected Result:'.",
+      "Expected results are repeated and not clearly defined for each step.",
       "Missing priority and test type fields."
     ],
     "updated": true,
-    "last_reviewed_at": "2026-04-12T04:29:29.702858Z"
+    "last_reviewed_at": "2026-04-25T14:04:28.525005Z"
   },
   "10": {
     "content_hash": "706b73196f115f07ac953bd0d5943da7c1a70c6623e916bd1eb4b34c533d8993",
